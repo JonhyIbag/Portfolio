@@ -1,0 +1,69 @@
+## =========================
+## .NET / ASP.NET (repo raíz)
+## =========================
+
+# Build results (dentro del proyecto)
+DiarioWeb/bin/
+DiarioWeb/obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# ASP.NET static build artifacts
+DiarioWeb/wwwroot/lib/
+DiarioWeb/wwwroot/dist/
+
+# Environment variables
+.env
+.env.*
+
+# App settings con secretos
+DiarioWeb/appsettings.Development.json
+DiarioWeb/appsettings.Production.json
+DiarioWeb/appsettings.Local.json
+
+# Entity Framework (opcional)
+DiarioWeb/Migrations/*.cs
+!DiarioWeb/Migrations/*Snapshot.cs
+
+# Databases locales
+*.mdf
+*.ldf
+*.db
+*.sqlite
+*.sqlite3
+
+# Publish output
+DiarioWeb/publish/
+*.publishsettings
+
+# Test results
+TestResults/
+
+# NuGet
+*.nupkg
+.nuget/
+packages/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / frontend (si aplica)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Docker (opcional)
+docker-compose.override.yml
