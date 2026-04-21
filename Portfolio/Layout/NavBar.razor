@@ -1,0 +1,126 @@
+@inject IJSRuntime JS
+@inject ILogger<NavBar> logger
+
+<header role="banner" class="header">
+    <section class="container__navbar">
+        
+        <!-- Navegación Principal -->
+        <nav aria-label="Navegación principal" class="navbar container">
+            <a href="/" class="navbar__logo">
+                @* <img src="img/gohan.jpeg" alt="logo de la página"> *@
+                <span>Jonathan Ibañez</span>
+            </a>
+            <div class="navbar__nav">
+                <ul class="navbar__list">
+                    <li class="nav__link">
+                        <NavLink href="" Match="NavLinkMatch.All">
+                            <span class="" aria-hidden="true"></span> Inicio
+                        </NavLink>
+                    </li>
+                    <li class="nav__link">
+                        <NavLink href="counter">
+                            <span class="" aria-hidden="true"></span> Tecnologías
+                        </NavLink>
+                    </li>
+                    <li class="nav__link">
+                        <NavLink href="weather">
+                            <span class="" aria-hidden="true"></span> Proyectos
+                        </NavLink>
+                    </li>
+                    <li class="nav__link">
+                        <NavLink href="counter">
+                            <span class="" aria-hidden="true"></span> Experiencia
+                        </NavLink>
+                    </li>
+                    <li class="nav__link" >
+                        <NavLink href="weather">
+                            <span class="" aria-hidden="true"></span> Estudios
+                        </NavLink>
+                    </li>
+                    <li class="nav__link">
+                        <NavLink href="counter">
+                            <span class="" aria-hidden="true"></span> Contacto
+                        </NavLink>
+                    </li>
+                </ul>
+
+                <!-- MENU PARA MOVILES-->
+                <button class="navbar__toogle-btn">
+                    <img src="img/toogle.png" alt="Boton de menu desplegable" style="height: 100%; width:100% ">
+                </button>
+                <div class="navbar__mobile-menu">
+                    <ul class="navbar__list-mobile">
+                        <li class="nav__link-mobile">
+                            <NavLink href="" Match="NavLinkMatch.All">
+                                <span aria-hidden="true"></span> Inicio
+                            </NavLink>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <NavLink href="counter">
+                                <span aria-hidden="true"></span> Sobre mí
+                            </NavLink>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <NavLink href="weather">
+                                <span aria-hidden="true"></span> Habilidades
+                            </NavLink>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <NavLink href="counter">
+                                <span aria-hidden="true"></span> Proyectos
+                            </NavLink>
+                        </li>
+                        <li class="nav__link-mobile" >
+                            <NavLink href="weather">
+                                <span aria-hidden="true"></span> Blog
+                            </NavLink>
+                        </li>
+                        <li class="nav__link-mobile">
+                            <NavLink href="counter">
+                                <span aria-hidden="true"></span> Contacto
+                            </NavLink>
+                        </li>
+                        <a href="/documents/CV2026_Español.pdf" download aria-label="Descargar CV en PDF">
+                            📄 CV
+                        </a>
+                        <!-- Selector de Idioma -->
+                        <select aria-label="Seleccionar idioma">
+                            <option value="es" selected>ES</option>
+                            <option value="en">EN</option>
+                        </select>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar__extras">
+                <a href="/documents/CV2026_Español.pdf" download aria-label="Descargar CV en PDF" title="Descargar mi CV">
+                    📄
+                </a>
+
+                <!-- Selector de Idioma -->
+                <select aria-label="Seleccionar idioma">
+                    <option value="es" selected>ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </nav>
+        
+    </section>  
+</header>
+
+
+@code 
+{
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if(firstRender)
+        {
+            await Task.Delay(100);
+            await JS.InvokeVoidAsync("initNavbar");
+        }
+    }
+
+    /*protected override void OnAfterRender(bool firstRender)
+    {
+        logger.LogInformation("Esto pasa despues del render");
+    }*/
+}

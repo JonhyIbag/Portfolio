@@ -67,3 +67,6 @@ yarn-error.log*
 
 # Docker (opcional)
 docker-compose.override.yml
+
+# Carpeta de pruebas
+Pruebas/*
