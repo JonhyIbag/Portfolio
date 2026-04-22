@@ -1,6 +1,7 @@
 :root{
     --cuerpo_light: #f59f19;
     --detalles_light: #3a549f;
+    /* --detalles_light: rgb(58, 84, 159); */
     --cabello_light: #edd138;
 }
 
@@ -8,6 +9,8 @@ html, body {
     font-family: "Fira Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
+    scroll-behavior: smooth;
+    scroll-padding-top: 60px;
 }
 
 body{
@@ -33,7 +36,8 @@ a, .btn-link {
 }
 
 .content {
-    padding-top: 1.1rem;
+    position: relative;
+    height:fit-content;
 }
 
 .valid.modified:not([type=checkbox]) {
@@ -127,13 +131,21 @@ code {
 }
 
 /*-----------------------------------------------ESTILOS NAVBAR-----------------------------------------------*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .container__navbar{
     background-color: var(--detalles_light);
     display: flex;
+    justify-self: center;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 80%;
     height: 40px;
+    border-radius: 0px 0px 15px 15px;
 }
 
 .navbar{
@@ -188,6 +200,20 @@ code {
 
 .navbar__extras a{
     color: var(--cuerpo_light);
+}
+
+.icon__link{
+    margin-inline: .3rem;
+}
+
+.icon__link img{
+    height: 28px;
+    width: 28px;
+}
+
+.icon__link svg{
+    height: 28px;
+    width: 28px;
 }
 
 .navbar__list{
@@ -247,8 +273,8 @@ code {
 }
 
 .navbar__toogle-btn{
-    width: 55px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: cover;
@@ -256,8 +282,6 @@ code {
     cursor: pointer;
     display: none;
 }
-
-
 
 .navbar__mobile-menu {
     display: none;
@@ -328,4 +352,183 @@ code {
         display: block;
         margin: 0;
     }
+}
+
+/*-----------------------------------------------ESTILOS MAIN-----------------------------------------------*/
+.main__container{
+    margin-inline: 15rem;
+}
+
+.main__container section{
+    position: relative;
+}
+
+.main__container h1{
+    color: var(--detalles_light);
+}
+
+/*-----------------------------------------------ESTILOS INICIO-----------------------------------------------*/
+.grid__ini{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    /* gap: 20px; */
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.grid__ini-item{
+    background-color: var(--detalles_light);
+    border: solid 2px var(--cabello_light);
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    margin: 30px;
+    padding: 12px;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.personal{
+    grid-column: 1/3;
+    width: 95%;
+}
+
+.personal img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 2px var(--cabello_light);
+}
+
+.grid__ini-item h2, h3{
+    color: var(--cabello_light);
+    justify-self: center;
+    margin-block: 5px;
+}
+
+.grid__ini-item h3{
+    font-size: 1.3rem;
+}
+
+.grid__ini-item p{
+    color: var(--cuerpo_light);
+    justify-self: center;
+    margin-block: 5px;
+}
+
+.grid__ini-item a{
+    color: var(--cabello_light);
+    justify-self: center;
+    margin-block: 5px;
+    text-decoration: none;
+}
+
+.grid__specific__tec-item img{
+    height: 70px;
+    width: 70px;
+    justify-self: center;
+}
+
+/*-----------------------------------------------ESTILOS TECNOLOGIAS-----------------------------------------------*/
+.grid__tecs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.grid__tecs-item{
+    background-color: var(--detalles_light);
+    border: solid 2px var(--cabello_light);
+    width: 500px;
+    /* height: auto; */
+    border-radius: 15px;
+    margin: 30px;
+    justify-self: center;
+}
+
+.grid__tecs-item h2{
+    color: var(--cabello_light);
+    justify-self: center;
+    margin-block: 5px;
+}
+
+.grid__specific__tec-item p{
+    color: var(--cabello_light);
+    justify-self: center;
+    margin-block: 5px;
+}
+
+.grid__specific__tec{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    align-items: center;
+}
+
+.grid__specific__tec-item{
+    margin: 30px;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid__specific__tec-item img{
+    height: 70px;
+    width: 70px;
+    justify-self: center;
+}
+
+/*-----------------------------------------------ESTILOS PROYECTOS-----------------------------------------------*/
+.grid__projects{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.grid__projects-item{
+    background-color: var(--detalles_light);
+    border: solid 2px var(--cabello_light);
+    width: 100%;
+    /* height: auto; */
+    border-radius: 15px;
+    margin: 30px;
+    justify-self: center;
+}
+
+.grid__projects-item h2{
+    color: var(--cabello_light);
+    justify-self: start;
+    margin-block: 5px;
+}
+
+.grid__projects-item p{
+    color: var(--cuerpo_light);
+    justify-self: start;
+    margin-block: 5px;
+}
+
+.grid__specific__project{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding: 30px;
+}
+
+.grid__specific__project-item{
+    margin: 10px;
+    justify-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.grid__specific__project img{
+    height: 250px;
+    width: 250px;
+    justify-self: center;
 }

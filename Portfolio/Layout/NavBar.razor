@@ -6,47 +6,54 @@
         
         <!-- Navegación Principal -->
         <nav aria-label="Navegación principal" class="navbar container">
-            <a href="/" class="navbar__logo">
+            <a href="#inicio" class="navbar__logo">
                 @* <img src="img/gohan.jpeg" alt="logo de la página"> *@
                 <span>Jonathan Ibañez</span>
             </a>
             <div class="navbar__nav">
                 <ul class="navbar__list">
                     <li class="nav__link">
-                        <NavLink href="" Match="NavLinkMatch.All">
-                            <span class="" aria-hidden="true"></span> Inicio
-                        </NavLink>
+                        <a href="#inicio">Inicio</a>
                     </li>
                     <li class="nav__link">
-                        <NavLink href="counter">
-                            <span class="" aria-hidden="true"></span> Tecnologías
-                        </NavLink>
+                        <a href="#tecnologias">Tecnologías</a>
                     </li>
                     <li class="nav__link">
-                        <NavLink href="weather">
-                            <span class="" aria-hidden="true"></span> Proyectos
-                        </NavLink>
+                        <a href="#proyectos">Proyectos</a>
                     </li>
                     <li class="nav__link">
-                        <NavLink href="counter">
-                            <span class="" aria-hidden="true"></span> Experiencia
-                        </NavLink>
+                        <a href="#experiencia">Experiencia</a>
                     </li>
                     <li class="nav__link" >
-                        <NavLink href="weather">
-                            <span class="" aria-hidden="true"></span> Estudios
-                        </NavLink>
-                    </li>
-                    <li class="nav__link">
-                        <NavLink href="counter">
-                            <span class="" aria-hidden="true"></span> Contacto
-                        </NavLink>
+                        <a href="#cursos">Cursos</a>
                     </li>
                 </ul>
+            </div>
+            <div class="navbar__extras">
+                <a href="https://github.com/JonhyIbag" target="_blank" class="icon__link">
+                    <img src="img/github.svg" alt="Link de GitHub">
+                </a>
+                <a href="https://www.linkedin.com/in/jonathan-ibanez-2b4460328/" target="_blank" class="icon__link">
+                    <img src="img/linkedin.png" alt="Link de LinkedIn">
+                </a>
+                <a href="/documents/CV2026_Español.pdf" class="icon__link" download aria-label="Descargar CV en PDF" title="Descargar mi CV">
+                    📄
+                </a>
+                @* <a class="icon__link">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clipRule="evenodd" />
+                    </svg>
+                </a> *@
+
+                <!-- Selector de Idioma -->
+                @* <select aria-label="Seleccionar idioma">
+                    <option value="es" selected>ES</option>
+                    <option value="en">EN</option>
+                </select> *@
 
                 <!-- MENU PARA MOVILES-->
                 <button class="navbar__toogle-btn">
-                    <img src="img/toogle.png" alt="Boton de menu desplegable" style="height: 100%; width:100% ">
+                    <img src="img/toogle.png" alt="Boton de menu desplegable" style="height: 35px; width:35px">
                 </button>
                 <div class="navbar__mobile-menu">
                     <ul class="navbar__list-mobile">
@@ -57,22 +64,22 @@
                         </li>
                         <li class="nav__link-mobile">
                             <NavLink href="counter">
-                                <span aria-hidden="true"></span> Sobre mí
+                                <span aria-hidden="true"></span> Tecnologías
                             </NavLink>
                         </li>
                         <li class="nav__link-mobile">
                             <NavLink href="weather">
-                                <span aria-hidden="true"></span> Habilidades
+                                <span aria-hidden="true"></span> Proyectos
                             </NavLink>
                         </li>
                         <li class="nav__link-mobile">
                             <NavLink href="counter">
-                                <span aria-hidden="true"></span> Proyectos
+                                <span aria-hidden="true"></span> Experiencia
                             </NavLink>
                         </li>
                         <li class="nav__link-mobile" >
                             <NavLink href="weather">
-                                <span aria-hidden="true"></span> Blog
+                                <span aria-hidden="true"></span> Estudios
                             </NavLink>
                         </li>
                         <li class="nav__link-mobile">
@@ -80,30 +87,10 @@
                                 <span aria-hidden="true"></span> Contacto
                             </NavLink>
                         </li>
-                        <a href="/documents/CV2026_Español.pdf" download aria-label="Descargar CV en PDF">
-                            📄 CV
-                        </a>
-                        <!-- Selector de Idioma -->
-                        <select aria-label="Seleccionar idioma">
-                            <option value="es" selected>ES</option>
-                            <option value="en">EN</option>
-                        </select>
                     </ul>
                 </div>
             </div>
-            <div class="navbar__extras">
-                <a href="/documents/CV2026_Español.pdf" download aria-label="Descargar CV en PDF" title="Descargar mi CV">
-                    📄
-                </a>
-
-                <!-- Selector de Idioma -->
-                <select aria-label="Seleccionar idioma">
-                    <option value="es" selected>ES</option>
-                    <option value="en">EN</option>
-                </select>
-            </div>
         </nav>
-        
     </section>  
 </header>
 
