@@ -403,10 +403,20 @@ header{
     border: solid 2px var(--cabello_light);
 }
 
-.grid__ini-item h2, h3{
+.grid__ini-item h2{
     color: var(--cabello_light);
     justify-self: center;
     margin-block: 5px;
+}
+
+.grid__ini-item h3{
+    color: var(--cuerpo_light);
+    justify-self: center;
+    margin-block: 5px;
+}
+
+.grid__ini-item span{
+    color: var(--cabello_light);
 }
 
 .grid__ini-item h3{
@@ -520,15 +530,50 @@ header{
     padding: 30px;
 }
 
-.grid__specific__project-item{
-    margin: 10px;
-    justify-self: center;
-    justify-items: center;
-    align-items: center;
-}
-
 .grid__specific__project img{
     height: 250px;
     width: 250px;
     justify-self: center;
+}
+
+.grid__specific__project-item{
+    margin: 10px;
+    justify-self: center;
+    justify-items: right;
+    align-items: center;
+}
+
+.grid__specific__project-item span{
+    color: var(--cabello_light);
+}
+
+.grid__specific__project-item button{
+    margin: 10px;
+    justify-self:right;
+    align-items: end;
+    background-color: var(--cuerpo_light);
+    border-radius: 20px;
+}
+
+.grid__specific__project-item button:hover{
+    background-color: var(--cabello_light);
+}
+
+.grid__specific__project-item img{
+    height: 20px;
+    width: 20px;
+}
+
+.project__badges{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self: start;
+    margin-bottom: 8px;
+    /* height: 30px; */
+}
+
+.project__badges img{
+    height: 20px;
+    width: auto;
 }
