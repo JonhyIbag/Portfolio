@@ -1,8 +1,13 @@
 :root{
-    --cuerpo_light: #f59f19;
-    --detalles_light: #3a549f;
-    /* --detalles_light: rgb(58, 84, 159); */
-    --cabello_light: #edd138;
+    --cuerpo: #f59f19;
+    --detalles: #102ead;
+    --cabello: #edd138;
+}
+
+.dark-theme{
+    --cuerpo: #313534;
+    --detalles: #99a1a5;
+    --cabello: #ffffff;
 }
 
 html, body {
@@ -11,10 +16,11 @@ html, body {
     font-style: normal;
     scroll-behavior: smooth;
     scroll-padding-top: 60px;
+    transition: all 0.5s ease;
 }
 
 body{
-    background-color: var(--cuerpo_light);
+    background-color: var(--cuerpo);
 }
 
 h1:focus {
@@ -138,7 +144,7 @@ header{
 }
 
 .container__navbar{
-    background-color: var(--detalles_light);
+    background-color: var(--detalles);
     display: flex;
     justify-self: center;
     justify-content: space-between;
@@ -146,6 +152,7 @@ header{
     width: 80%;
     height: 40px;
     border-radius: 0px 0px 15px 15px;
+    border: solid 2px var(--cabello);
 }
 
 .navbar{
@@ -180,7 +187,7 @@ header{
     text-transform: uppercase;
     font-weight: 900;
     font-size: 1.5rem;
-    color: var(--cabello_light);
+    color: var(--cabello);
 }
 
 .navbar__nav{
@@ -199,7 +206,7 @@ header{
 }
 
 .navbar__extras a{
-    color: var(--cuerpo_light);
+    color: var(--cuerpo);
 }
 
 .icon__link{
@@ -216,6 +223,23 @@ header{
     width: 28px;
 }
 
+.theme__button{
+    margin-inline: .3rem;
+    background-color: transparent;
+    border: 0px;
+    margin: 0px;
+}
+
+.theme__button img{
+    height: 28px;
+    width: 28px;
+}
+
+.theme__button svg{
+    height: 28px;
+    width: 28px;
+}
+
 .navbar__list{
     display: flex;
     list-style: none;
@@ -225,7 +249,7 @@ header{
 
 .navbar__list a {
     margin-inline: 10px;
-    color: var(--cuerpo_light);
+    color: var(--cuerpo);
 }
 
 .navbar__list select{
@@ -248,12 +272,12 @@ header{
 
 .nav__link a{
     text-decoration: none;
-    color: var(--cuerpo_light);
+    color: var(--cuerpo);
     position: relative;
 }
 
 .nav__link a.active {
-    color: var(--cabello_light);
+    color: var(--cabello);
 }
 
 .nav__link a::after {
@@ -263,7 +287,7 @@ header{
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: var(--cuerpo_light);
+    background-color: var(--cuerpo);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -364,7 +388,7 @@ header{
 }
 
 .main__container h1{
-    color: var(--detalles_light);
+    color: var(--detalles);
 }
 
 /*-----------------------------------------------ESTILOS INICIO-----------------------------------------------*/
@@ -379,8 +403,8 @@ header{
 }
 
 .grid__ini-item{
-    background-color: var(--detalles_light);
-    border: solid 2px var(--cabello_light);
+    background-color: var(--detalles);
+    border: solid 2px var(--cabello);
     width: 90%;
     height: 90%;
     border-radius: 15px;
@@ -400,23 +424,23 @@ header{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: solid 2px var(--cabello_light);
+    border: solid 2px var(--cabello);
 }
 
 .grid__ini-item h2{
-    color: var(--cabello_light);
+    color: var(--cabello);
     justify-self: center;
     margin-block: 5px;
 }
 
 .grid__ini-item h3{
-    color: var(--cuerpo_light);
+    color: var(--cuerpo);
     justify-self: center;
     margin-block: 5px;
 }
 
 .grid__ini-item span{
-    color: var(--cabello_light);
+    color: var(--cabello);
 }
 
 .grid__ini-item h3{
@@ -424,13 +448,13 @@ header{
 }
 
 .grid__ini-item p{
-    color: var(--cuerpo_light);
+    color: var(--cuerpo);
     justify-self: center;
     margin-block: 5px;
 }
 
 .grid__ini-item a{
-    color: var(--cabello_light);
+    color: var(--cabello);
     justify-self: center;
     margin-block: 5px;
     text-decoration: none;
@@ -451,8 +475,8 @@ header{
 }
 
 .grid__tecs-item{
-    background-color: var(--detalles_light);
-    border: solid 2px var(--cabello_light);
+    background-color: var(--detalles);
+    border: solid 2px var(--cabello);
     width: 500px;
     /* height: auto; */
     border-radius: 15px;
@@ -461,13 +485,13 @@ header{
 }
 
 .grid__tecs-item h2{
-    color: var(--cabello_light);
+    color: var(--cabello);
     justify-self: center;
     margin-block: 5px;
 }
 
 .grid__specific__tec-item p{
-    color: var(--cabello_light);
+    color: var(--cabello);
     justify-self: center;
     margin-block: 5px;
 }
@@ -501,8 +525,8 @@ header{
 }
 
 .grid__projects-item{
-    background-color: var(--detalles_light);
-    border: solid 2px var(--cabello_light);
+    background-color: var(--detalles);
+    border: solid 2px var(--cabello);
     width: 100%;
     /* height: auto; */
     border-radius: 15px;
@@ -511,13 +535,13 @@ header{
 }
 
 .grid__projects-item h2{
-    color: var(--cabello_light);
+    color: var(--cabello);
     justify-self: start;
     margin-block: 5px;
 }
 
 .grid__projects-item p{
-    color: var(--cuerpo_light);
+    color: var(--cuerpo);
     justify-self: start;
     margin-block: 5px;
 }
@@ -544,19 +568,19 @@ header{
 }
 
 .grid__specific__project-item span{
-    color: var(--cabello_light);
+    color: var(--cabello);
 }
 
 .grid__specific__project-item button{
     margin: 10px;
     justify-self:right;
     align-items: end;
-    background-color: var(--cuerpo_light);
+    background-color: var(--cuerpo);
     border-radius: 20px;
 }
 
 .grid__specific__project-item button:hover{
-    background-color: var(--cabello_light);
+    background-color: var(--cabello);
 }
 
 .grid__specific__project-item img{
@@ -576,4 +600,98 @@ header{
 .project__badges img{
     height: 20px;
     width: auto;
+}
+
+/*-----------------------------------------------ESTILOS EXPERIENCIA-----------------------------------------------*/
+.container__exp{
+    display: block;
+    background-color: var(--detalles);
+    border: solid 2px var(--cabello);
+    width: 100%;
+    /* height: auto; */
+    border-radius: 15px;
+    margin: 30px;
+    justify-self: center;
+}
+
+.container__exp h2{
+    color: var(--cabello);
+    justify-self: center;
+    margin-block: 5px;
+}
+
+.container__exp h3{
+    color: var(--cuerpo);
+    justify-self: start;
+    margin-block: 5px;
+    margin-inline: 15px;
+    font-size: 1.3rem;
+}
+
+.container__exp p{
+    color: var(--cuerpo);
+    justify-self: start;
+    margin-inline: 15px;
+    margin-bottom: 0px;
+}
+
+.container__exp ul{
+    color: var(--cuerpo);
+    justify-self: start;
+    margin-inline: 15px;
+    margin-top: 0px;
+}
+
+.project__badges{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-self: start;
+    margin-bottom: 8px;
+    /* height: 30px; */
+}
+
+.project__badges img{
+    height: 20px;
+    width: auto;
+}
+
+/*-----------------------------------------------ESTILOS CURSOS-----------------------------------------------*/
+.grid__courses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.grid__courses-item{
+    background-color: var(--detalles);
+    border: solid 2px var(--cabello);
+    width: 100%;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.grid__courses-item img{
+    display: block;
+    margin: 10px auto 0 auto;
+    width: auto;
+    height: 280px;
+}
+
+.grid__courses h2{
+    color: var(--cabello);
+    justify-self: center;
+    margin-block: 5px;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+
+.grid__courses ul{
+    color: var(--cuerpo);
+    justify-self: start;
+    margin-inline: 15px;
+    margin-top: 0px;
 }

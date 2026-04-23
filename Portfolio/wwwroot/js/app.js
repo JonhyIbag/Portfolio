@@ -44,3 +44,15 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
+function toggleTheme() {
+    const isDark = document.body.classList.toggle("dark-theme");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+}
+
+window.onload = () => {
+    const theme = localStorage.getItem("theme");
+    if(theme == "dark"){
+        document.body.classList.add("dark-theme");
+    }
+};
