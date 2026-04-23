@@ -460,11 +460,11 @@ header{
     text-decoration: none;
 }
 
-.grid__specific__tec-item img{
-    height: 70px;
-    width: 70px;
+.grid__ini-item ul{
     justify-self: center;
+    list-style: none;
 }
+
 
 /*-----------------------------------------------ESTILOS TECNOLOGIAS-----------------------------------------------*/
 .grid__tecs{
@@ -577,6 +577,7 @@ header{
     align-items: end;
     background-color: var(--cuerpo);
     border-radius: 20px;
+    color: var(--detalles);
 }
 
 .grid__specific__project-item button:hover{
@@ -632,7 +633,11 @@ header{
     color: var(--cuerpo);
     justify-self: start;
     margin-inline: 15px;
-    margin-bottom: 0px;
+    margin-block: 15px;
+}
+
+.container__exp span{
+    color: var(--cabello);
 }
 
 .container__exp ul{
