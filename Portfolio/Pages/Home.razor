@@ -169,9 +169,16 @@
         <div class="grid__projects">
             <div class="grid__projects-item">
                 <div class="grid__specific__project">
-                    <img src="img/gohan.jpeg" alt="">
-
-                    
+                    <div class="carousel__project">
+                        <button @onclick="Prev" class="carousel__project__btn prev">⟨</button>
+                        <div class="carousel__project__track">
+                            @for(int i = 0; i < Images.Count; i++)
+                            {
+                                <img src="@Images[i]" alt="Proyecto Pizzeria: Imagen de GUI" class="carousel__project__img @(i == currentIndexCarouselProjects ? "active" : "")">
+                            }
+                        </div>
+                        <button @onclick="Next" class="carousel__project__btn next">⟩</button>
+                    </div>
                     <div class="grid__specific__project-item">
                         <h2>Pizza UAM - Proyecto Académico</h2>
                         <div class="project__badges">
@@ -281,3 +288,26 @@
         </div>
     </section>
 </div>
+
+@code 
+{
+    private int currentIndexCarouselProjects = 0;
+
+    private List<string> Images = new()
+        {
+            "img/proyectos/pizzeria/principal.png",
+            "img/proyectos/pizzeria/ingredientes.png",
+            "img/proyectos/pizzeria/orden.png",
+            "img/proyectos/pizzeria/estado.png"
+        };
+
+    void Next()
+    {
+        currentIndexCarouselProjects = (currentIndexCarouselProjects + 1) % Images.Count;
+    }
+
+    void Prev()
+    {
+        currentIndexCarouselProjects = (currentIndexCarouselProjects - 1 + Images.Count) % Images.Count;
+    }
+}
