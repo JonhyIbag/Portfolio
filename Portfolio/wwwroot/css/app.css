@@ -149,7 +149,9 @@ header{
     justify-self: center;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     height: 40px;
     border-radius: 0px 0px 15px 15px;
     border: solid 2px var(--cabello);
@@ -380,7 +382,9 @@ header{
 
 /*-----------------------------------------------ESTILOS MAIN-----------------------------------------------*/
 .main__container{
-    margin-inline: 15rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .main__container section{
@@ -408,7 +412,7 @@ header{
     width: 90%;
     height: 90%;
     border-radius: 15px;
-    margin: 30px;
+    margin: 15px;
     padding: 12px;
     justify-self: center;
     justify-items: center;
@@ -477,7 +481,8 @@ header{
 .grid__tecs-item{
     background-color: var(--detalles);
     border: solid 2px var(--cabello);
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     /* height: auto; */
     border-radius: 15px;
     margin: 30px;
@@ -554,11 +559,43 @@ header{
     padding: 30px;
 }
 
-.grid__specific__project img{
-    height: 250px;
-    width: 250px;
-    justify-self: center;
+.carousel__project{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
 }
+
+.carousel__project__track{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel__project__img{
+    height: auto;
+    width: 100%;
+    max-width: 250px;
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.carousel__project__img.active{
+    display: block;
+}
+
+.carousel__project__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
 
 .grid__specific__project-item{
     margin: 10px;
@@ -666,8 +703,10 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+    max-width: 1200px;
     justify-items: center;
-    column-gap: 20px;
+    justify-self: center;
+    gap: 20px;
 }
 
 .grid__courses-item{
@@ -675,14 +714,16 @@ header{
     border: solid 2px var(--cabello);
     width: 100%;
     border-radius: 15px;
-    margin: 30px;
+    margin: 0 auto;
+    justify-self: center;
 }
 
 .grid__courses-item img{
     display: block;
     margin: 10px auto 0 auto;
-    width: auto;
-    height: 280px;
+    width: 90%;
+    height: auto;
+    max-height: 280px;
 }
 
 .grid__courses h2{

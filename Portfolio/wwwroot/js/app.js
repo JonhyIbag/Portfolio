@@ -24,6 +24,7 @@ window.initNavbar = () => {
     window.addEventListener("load", hideMenuResize);
 };
 
+//Funcion para hacer scroll al clickar una seccion del navbar
 window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav__link a");
@@ -45,11 +46,12 @@ window.addEventListener("scroll", () => {
     });
 });
 
+//Funcion para modificar tema oscuro o normal
 function toggleTheme() {
     const isDark = document.body.classList.toggle("dark-theme");
     localStorage.setItem("theme", isDark ? "dark" : "light");
 }
-
+ // Funcion para guardar la preferencia de tema del usuario
 window.onload = () => {
     const theme = localStorage.getItem("theme");
     if(theme == "dark"){
