@@ -427,6 +427,7 @@ header{
 .personal img{
     width: 200px;
     height: 200px;
+    object-fit: cover;
     border-radius: 50%;
     border: solid 2px var(--cabello);
 }
@@ -454,7 +455,8 @@ header{
 .grid__ini-item p{
     color: var(--cuerpo);
     justify-self: center;
-    margin-block: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .grid__ini-item a{
