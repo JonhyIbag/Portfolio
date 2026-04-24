@@ -3,8 +3,8 @@
 ## =========================
 
 # Build results (dentro del proyecto)
-DiarioWeb/bin/
-DiarioWeb/obj/
+Portfolio/bin/
+Portfolio/obj/
 
 # Visual Studio / VS Code
 .vs/
@@ -21,21 +21,21 @@ DiarioWeb/obj/
 *.log
 
 # ASP.NET static build artifacts
-DiarioWeb/wwwroot/lib/
-DiarioWeb/wwwroot/dist/
+Portfolio/wwwroot/lib/
+Portfolio/wwwroot/dist/
 
 # Environment variables
 .env
 .env.*
 
 # App settings con secretos
-DiarioWeb/appsettings.Development.json
-DiarioWeb/appsettings.Production.json
-DiarioWeb/appsettings.Local.json
+Portfolio/appsettings.Development.json
+Portfolio/appsettings.Production.json
+Portfolio/appsettings.Local.json
 
 # Entity Framework (opcional)
-DiarioWeb/Migrations/*.cs
-!DiarioWeb/Migrations/*Snapshot.cs
+Portfolio/Migrations/*.cs
+!Portfolio/Migrations/*Snapshot.cs
 
 # Databases locales
 *.mdf
@@ -45,7 +45,7 @@ DiarioWeb/Migrations/*.cs
 *.sqlite3
 
 # Publish output
-DiarioWeb/publish/
+Portfolio/publish/
 *.publishsettings
 
 # Test results
